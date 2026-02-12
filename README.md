@@ -1,38 +1,30 @@
 # White Blood Cell Classification
 
-CNN-based classification of lymphoblasts vs normal white blood cells from microscopy images.
+## Objective
+Classify white blood cell images into lymphoblast vs normal categories for leukemia-related screening workflows.
 
-## Problem
-Support leukemia screening by classifying white blood cell images into lymphoblast vs normal.
+## Method
+- CNN baseline with data augmentation.
+- Model refinement and comparative evaluation.
+- Error analysis with class-level metrics.
 
-## Approach
-Train CNN baselines with augmentation and evaluate model variants for improved generalization.
+## Repository Structure
+- `notebooks/` training and evaluation notebooks.
+- `src/` reusable code modules.
+- `results/` metrics and plots.
+- `assets/` README figures.
+- `models/` saved models (optional).
+- `data/` local dataset directory (not versioned).
 
-## Highlights
-- Baseline CNN and augmentation strategy
-- Model refinements and comparative evaluation
-- Error analysis and class-wise performance inspection
+## Data Access
+Use local microscopy image data under `data/`.
 
-## Data
-Microscopy image dataset (zip). Place under `data/` and unzip.
+## Run
+1. Put dataset files under `data/`.
+2. Run notebooks in `notebooks/`.
+3. Save final metrics and figures to `results/`.
 
-## Project Structure
-- notebooks/ - Main workflow notebooks
-- data/ - Datasets (as noted above)
-- models/ - Model checkpoints (optional)
-- results/ - Metrics, plots, and outputs
-- assets/ - Figures for README
-
-## How to Run
-- Unzip dataset into `data/`
-- Run `notebooks/wbc_classification_part1.ipynb` then Part 2
-
-## Status
-Ready for rerun; metrics can be recomputed from notebooks.
-
-## Git LFS
-This repo contains large files. Track `*.pth`, `*.pt`, `*.zip` with Git LFS.
-
-## Results Showcase
-- Recommended outputs in `results/`: confusion matrix, class-wise precision/recall/F1, and representative error cases.
-- Add final figures to `assets/` and link them in this section after reruns.
+## Result Artifacts
+- Confusion matrix
+- Class-wise precision/recall/F1
+- Representative error samples
